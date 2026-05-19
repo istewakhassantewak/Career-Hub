@@ -9,7 +9,7 @@ const Header = () => {
         <li><NavLink to="/blogs">Blogs</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,7 +29,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Apply Now</a>
+                <a className="btn text-white rounded-sm  bg-gradient-to-r from-[#7E90FE] to-[#9873FF]">Start Applying</a>
             </div>
         </div>
     );
