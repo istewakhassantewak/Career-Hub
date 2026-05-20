@@ -9,7 +9,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className="flex items-center">
-                <img src="../../../public/images/user.png" alt="" />
+                <img src="/images/user.png" alt="User Profile" />
             </div>
         </div>
     );
