@@ -10,12 +10,12 @@ const FeaturedJobs = () => {
             .then(data => setJobs(data))
     }, [])
     return (
-        <div>
+        <div id="feature">
             <div className="text-center">
                 <h2 className="text-5xl font-extrabold mt-20">Featured Jobs</h2>
                 <p className="font-medium text-lg mt-4 text-[#757575]">Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {
                     jobs.slice(0, dataLength).map(job => <Job key={job.id} job={job}></Job>)
                 }

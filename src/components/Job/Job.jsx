@@ -14,7 +14,7 @@ const Job = ({ job }) => {
             <div className="card-body space-y-4">
                 <h2 className="card-title font-extrabold text-2xl text-[#474747]">{job_title}</h2>
                 <p className="font-semibold text-xl text-[#757575]">{company_name}</p>
-                <div>
+                <div className="flex">
                     <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE] text-[#7E90FE]  mr-4">{remote_or_onsite}</button>
                     <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE]  text-[#7E90FE]   mr-4">{job_type}</button>
                 </div>

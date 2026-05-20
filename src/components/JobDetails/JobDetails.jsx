@@ -11,7 +11,10 @@ const JobDetails = () => {
     }
     return (
         <div>
-            <h4 className="font-extrabold text-3xl text-center my-28">Job Details</h4>
+            <div className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white py-16 px-6">
+                <h4 className="font-extrabold text-3xl text-center">Job Details</h4>
+            </div>
+
             <div className="grid gap-4  md:grid-cols-5 mt-20">
                 <div className="md:col-span-3 space-y-6 p-6 pt-0">
                     <p className="font-medium text-lg text-[#757575]"><span className="text-black font-extrabold">Job Description : </span>{job.job_description}</p>

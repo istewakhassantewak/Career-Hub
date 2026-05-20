@@ -9,10 +9,10 @@ const CategoryList = () => {
     }, [])
     console.log(datas)
     return (
-        <div>
+        <div id="jobc">
             <h2 className="text-5xl font-extrabold mt-20 text-center">Job Category List</h2>
             <p className="font-medium text-lg mt-4 text-[#757575] text-center">Explore Thousand of Job opportunity withh all the informaion you need. Its your future</p>
-            <div className="grid grid-cols-4 gap-4 mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-20">
                 {
                     datas.map(data => <div key={data.id} className="p-6 bg-[#7E90FE]/5 rounded-2xl border border-[#7E90FE]/10 flex flex-col items-start gap-4 transition-all hover:shadow-md">
                         {/* Icon/Logo Wrapper */}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { FaDollarSign } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -33,7 +33,10 @@ const AppliedJobs = () => {
     }, [jobs])
     return (
         <div>
-            <h4 className="font-extrabold text-3xl text-center my-28">Applied Jobs</h4>
+            <div className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white py-16 px-6">
+                <h4 className="font-extrabold text-3xl text-center">Applied Jobs</h4>
+            </div>
+
             <div>
                 <div className="flex justify-end mb-6">
                     <details className="dropdown">
@@ -46,7 +49,7 @@ const AppliedJobs = () => {
                     </details>
                 </div>
                 {
-                    displayJobs.map(job => <div key={job.id} className="card card-side rounded-lg bg-base-100 shadow-sm mb-6">
+                    displayJobs.map(job => <div key={job.id} className="card card-side rounded-lg bg-base-100 shadow-sm mb-6 flex-col md:flex-row">
                         <figure className="w-60 h-60  p-8 " >
                             <img
                                 className="w-full h-full rounded-lg object-contain bg-[#F4F4F4] p-8"
@@ -66,8 +69,8 @@ const AppliedJobs = () => {
                                 <h2 className="flex"> <FaDollarSign className="text-2xl  mr-2" />{job.salary}</h2>
                             </div>
                         </div>
-                        <div className="flex items-center mr-5 justify-end">
-                            <button className="btn rounded-md  text-white bg-linear-to-r from-[#7E90FE] to-[#9873FF]">View Details</button>
+                        <div className="flex items-center mr-5 mb-6 md:mb-0 justify-center md:justify-end">
+                            <Link to={`/job/${job.id}`}><button className="btn rounded-sm  text-white bg-linear-to-r from-[#7E90FE] to-[#9873FF]">View Details</button></Link>
                         </div>
                     </div>
                     )
